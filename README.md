@@ -7,4 +7,4 @@ This is a basic React starter project using vite bundler 🌟
 
 ## Show your support
 
-if you found it helpful then give a star 🌟 to the repo.
+If you found it helpful then give a star 🌟 to the repo.
