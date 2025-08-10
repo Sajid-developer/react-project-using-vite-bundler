@@ -1,2 +1,2 @@
-# Vite React Project
+# Vite React App
 This is a basic React starter project using vite bundler 🌟
