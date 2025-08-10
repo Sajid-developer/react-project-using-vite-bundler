@@ -1,7 +1,7 @@
 # Vite React Application
 This is a basic React starter project using vite bundler 🌟
 
-## Screenshot 📷
+## 📷 Screenshot
 
 ![Screenshot](images/screenshot.png)
 
