@@ -43,3 +43,40 @@
 .read-the-docs {
   color: #888;
 }
+
+form{
+  max-width: 420px;
+  width: 100vw;
+  padding: 1.4rem 2rem;
+  box-sizing: border-box;
+}
+form h1{
+  margin-bottom: 60px;
+}
+form input{
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 12px auto;
+  color: white;
+  border: 0;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+input:focus{
+  border: 1.4px solid aqua;
+}
+
+button{
+  width: 100%;
+  background: linear-gradient(45deg, rgb(0, 210, 210), rgb(0, 255, 76));
+  padding: 0.6rem 2rem;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-size: 14px;
+  color: black;
+}
