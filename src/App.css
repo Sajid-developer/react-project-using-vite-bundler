@@ -51,13 +51,13 @@ form{
   box-sizing: border-box;
 }
 form h1{
-  margin-bottom: 60px;
+  margin-bottom: 120px;
 }
 form input{
   width: 100%;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  margin: 12px auto;
+  font-size: 0.9rem;
+  padding: 0.6rem 1rem;
+  margin: 6px 0 24px 0;
   color: white;
   border: 0;
   outline: none;
@@ -72,7 +72,7 @@ input:focus{
 button{
   width: 100%;
   background: linear-gradient(45deg, rgb(0, 210, 210), rgb(0, 255, 76));
-  padding: 0.6rem 2rem;
+  padding: 0.7rem 2rem;
   border: none;
   outline: none;
   text-transform: uppercase;
