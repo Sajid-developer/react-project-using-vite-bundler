@@ -1,45 +1,36 @@
-import { useState } from 'react'
+import { useState, useCallback } from 'react'
 import './App.css'
 import Login from './Login'
 import Dashboard from './Dashboard'
 
+const USERS = [
+  { email: "sajid123@gmail.com", password: "#sajid102", role: "User" },
+  { email: "iftua123@gmail.com", password: "@iftu4677", role: "User" },
+  { email: "admin123@gmail.com", password: "admin123", role: "Admin" }
+]
+
 function App() {
-
   const [user, setUser] = useState(null)
+  const [loginError, setLoginError] = useState('')
 
-  const userInfo = [
-      {
-        email : "sajid123@gmail.com",
-        password : "#sajid102"
-      },
-      {
-        email : "iftua123@gmail.com",
-        password : "@iftu4677"
-      },
-    ]
-
-  const admin = {
-        email : "admin123@gmail.com",
-        password : "admin123"
-  }
-
-  const LoginHandler = (email,password)=>{
-    if(email == admin.email && password == admin.password){
-      setUser('Admin')
-      console.log("Admin")
-    }else if(userInfo.find(user => user.email == email && user.password == password) ){
-      setUser('User')
-      console.log("User")
+  const loginHandler = useCallback((email, password) => {
+    setLoginError('')
+    const foundUser = USERS.find(
+      u => u.email === email && u.password === password
+    )
+    if (foundUser) {
+      setUser(foundUser.role)
+    } else {
+      setLoginError('🛑 Invalid email or password !')
     }
-    else{
-      alert('Invalid User !')
-    }
-  }
-
+  }, [])
 
   return (
     <>
-      {!user ? <Login handlelogin={LoginHandler} /> : <Dashboard userName={user} />}
+      {!user
+        ? <Login handlelogin={loginHandler} loginerror={loginError} />
+        : <Dashboard userName={user} />
+      }
     </>
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Login = ({ handlelogin }) => {
+const Login = ({ handlelogin, loginerror }) => {
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -32,6 +32,9 @@ const Login = ({ handlelogin }) => {
   return (
     <form onSubmit={submitHandler}>
       <h1>Login Form</h1>
+
+      {loginerror && <p style={{ fontSize: '16px', color: 'red', marginBottom: '20px' }}>{loginerror}</p>}
+
       {error && <p style={{ fontSize: '16px', color: 'red', marginBottom: '40px' }}>{error}</p>}
 
       <label style={{ display: 'flex', width: '100%', fontSize: '16px' , textAlign: 'left' }}>Email</label>
