@@ -4,9 +4,9 @@ import Login from './Login'
 import Dashboard from './Dashboard'
 
 const USERS = [
-  { email: "sajid123@gmail.com", password: "#sajid102", role: "User" },
-  { email: "iftua123@gmail.com", password: "@iftu4677", role: "User" },
-  { email: "admin123@gmail.com", password: "admin123", role: "Admin" }
+  { name: "Sajid", email: "sajid123@gmail.com", password: "#sajid102", role: "User" },
+  { name: "Iftekhar", email: "iftua123@gmail.com", password: "@iftu4677", role: "User" },
+  { name: "Mr. Admin", email: "admin123@gmail.com", password: "admin123", role: "Admin" }
 ]
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
       u => u.email === email && u.password === password
     )
     if (foundUser) {
-      setUser(foundUser.role)
+      setUser(foundUser.name)
     } else {
       setLoginError('🛑 Invalid email or password !')
     }
